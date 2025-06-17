@@ -1,0 +1,154 @@
+/* ----------------------------------
+   Glowing Animation for Site Name
+----------------------------------- */
+@keyframes textShadowPulse {
+  0% {
+    text-shadow: 0 0 5px #00ffa6;
+    color: #fff;
+  }
+  25% {
+    text-shadow: 0 0 10px #0055ff;
+    color: #e0e0e0;
+  }
+  50% {
+    text-shadow: 0 0 15px #00ff00;
+    color: #ccc;
+  }
+  75% {
+    text-shadow: 0 0 10px #e5ff00;
+    color: #e0e0e0;
+  }
+  100% {
+    text-shadow: 0 0 5px #ff002b;
+    color: #fff;
+  }
+}
+
+#name-hover {
+  font-size: 36px;
+  font-weight: 650;
+  animation: textShadowPulse 6s infinite alternate;
+  transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+/* ----------------------------------
+   Navbar Styles
+----------------------------------- */
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.navbar .fas {
+  color: #343a40; /* Light mode icon */
+  transition: color 0.3s;
+}
+
+/* ----------------------------------
+   Dark Mode Styles
+----------------------------------- */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .nav-link,
+body.dark-mode .navbar-brand {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode i,
+.dark-mode .navbar .fas {
+  color: #f8f9fa;
+}
+
+/* ----------------------------------
+   Body Default (Light Mode)
+----------------------------------- */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ----------------------------------
+   Search Form Styles
+----------------------------------- */
+.search-hover-form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.search-input {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.search-button {
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.search-hover-form:hover .search-input {
+  width: 200px;
+  opacity: 1;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+/* ----------------------------------
+   Placeholder Colors
+----------------------------------- */
+input::placeholder {
+  color: #555;
+}
+
+.dark-mode input::placeholder {
+  color: #ccc;
+}
+
+/* ----------------------------------
+   Dropdown Menu Styles
+----------------------------------- */
+.dropdown-menu {
+  background-color: #fff;
+  color: #212529;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #212529;
+}
+
+.dark-mode .dropdown-menu {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+.dark-mode .dropdown-menu .dropdown-item {
+  color: #f8f9fa;
+}
+
+.dark-mode .dropdown-menu .dropdown-item:hover {
+  background-color: #444;
+}
